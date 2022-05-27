@@ -18,11 +18,9 @@
             </label>
         </div>
     </div>
-
     <div class="result">
         <button class="btn-submit" (click)="show__Result()">Result</button>
     </div>   
-
     <div class="popup" [ngClass]="{'popup_visible' : this.popup}" (click)="hide__Popup()">
         <div class="popup__result" *ngIf="this.result == 0">{{resultText}}</div>
     </div>
