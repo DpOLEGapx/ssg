@@ -11,7 +11,6 @@ export class AppComponent {
   title = 'ssg';
   inputChecked: boolean = false;
   popup: boolean = false;
-  result: number = 0;
   resultText: string;
   resultArrayText: string[] = ['Introvert', 'Extrovert', 'Ambivert'];
   
@@ -27,7 +26,7 @@ export class AppComponent {
       if(item.nativeElement.checked == true) {
 
         sum += Number(item.nativeElement.value);
-      }     
+      };     
     });
 
     //if score equals 0 or less than 3 then result Introvert 
@@ -47,10 +46,10 @@ export class AppComponent {
 
       this.resultText = this.resultArrayText[2];
     } 
-
+    
     this.toggle__Popup();
 
-  }
+  };
 
   toggle__Popup() {
 
@@ -66,7 +65,7 @@ export class AppComponent {
 
     this.inputChecked = !this.inputChecked;
   }
-
+  
   questions = [
     
     {title: 'How likely are you to strike a conversation with other people?',
@@ -113,4 +112,4 @@ export class AppComponent {
         {answer: 'B. No, I just can’t'}
       ]},
   ];
-}
+};
